@@ -52,7 +52,7 @@ public extension Sender {
     /// If the Sender is not registered no MessageBlock will be assigned -> The Message won't be send anywhere and an
     /// Error gets thrown.
     
-    public func sendMessage(_ message: Message, _ method: SendingMethod, _ replyHandler: ((_ message: Message) -> Void)?, _ errorHandler: ((_ error: Error) -> Void)?) {
+    func sendMessage(_ message: Message, _ method: SendingMethod, _ replyHandler: ((_ message: Message) -> Void)?, _ errorHandler: ((_ error: Error) -> Void)?) {
         
         if let messageBlock = self.sendMessageBlock {
             messageBlock(

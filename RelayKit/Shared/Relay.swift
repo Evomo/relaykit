@@ -108,6 +108,11 @@ open class Relay: NSObject {
         
     }
     
+    /// Try to activate WC Session if it was not successful on init
+    public func activateWCSession() -> Bool {
+        return self.core.activateWCSession()
+    }
+    
     /// Registering a Sender can only be done once per object
     ///
     /// - note: A followed call with the same sender will overwrite the old one

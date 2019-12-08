@@ -62,5 +62,8 @@ public class WatchConnectivityCore: NSObject, RelayCore {
         }
         
     }
+    public func activateWCSession() -> Bool {
+        return false
+    }
     
 }

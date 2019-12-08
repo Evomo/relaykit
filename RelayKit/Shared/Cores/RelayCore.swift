@@ -40,6 +40,8 @@ public protocol RelayCore: class {
     var didReceiveMessage: (_ message: [String: Any], _ method: SendingMethod, _ replyHandler: (([String: Any]) -> Void)?) -> Void { get set }
     
     func sendMessage(_ data: [String: Any], _ method: SendingMethod, replyHandler: @escaping ([String: Any]) -> Void, errorHandler: @escaping (Error) -> Void) throws
+    
+    func activateWCSession() -> Bool
 }
 
 public class SimpleCore: RelayCore {
@@ -63,4 +65,7 @@ public class SimpleCore: RelayCore {
         self.didReceiveMessage(data, method, replyHandler)
     }
     
+    public func activateWCSession() -> Bool {
+        return false
+    }
 }
