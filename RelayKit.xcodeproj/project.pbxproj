@@ -65,7 +65,7 @@
 		2A1D7FEA1F6ED94F004AF4D2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2A2F2D731F7075E200A3BCE5 /* SendingMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendingMethod.swift; sourceTree = "<group>"; };
 		2A2F2D761F707FB100A3BCE5 /* SimpleRelaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRelaySpec.swift; sourceTree = "<group>"; };
-		2A2F2D781F70899D00A3BCE5 /* RelayKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RelayKit.podspec; sourceTree = "<group>"; };
+		2A2F2D781F70899D00A3BCE5 /* RelayKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RelayKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2A48ECBB1F6DBDA400542EA6 /* RelayCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayCore.swift; sourceTree = "<group>"; };
 		2A48ECBE1F6DC13300542EA6 /* WatchConnectivityCoreIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityCoreIOS.swift; sourceTree = "<group>"; };
 		2A48ECC01F6DC6BA00542EA6 /* WatchConnectivityCoreWatchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityCoreWatchOS.swift; sourceTree = "<group>"; };
@@ -117,9 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				2A1388E51FBBBCBB00B1C616 /* .travis.yml */,
+				2A58CB211F6EC71F00E817ED /* Podfile */,
 				2A2F2D781F70899D00A3BCE5 /* RelayKit.podspec */,
 				2A1D7FEA1F6ED94F004AF4D2 /* README.md */,
-				2A58CB211F6EC71F00E817ED /* Podfile */,
 				2A1499261F6D436A00F1269F /* RelayKit */,
 				2A58CB161F6EC44900E817ED /* Tests */,
 				2A1499251F6D436A00F1269F /* Products */,
@@ -262,7 +262,6 @@
 				2A1499201F6D436A00F1269F /* Frameworks */,
 				2A1499211F6D436A00F1269F /* Headers */,
 				2A1499221F6D436A00F1269F /* Resources */,
-				102CC2F29CD0394F46CDA670 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,7 +281,6 @@
 				2A1499301F6D43B200F1269F /* Frameworks */,
 				2A1499311F6D43B200F1269F /* Headers */,
 				2A1499321F6D43B200F1269F /* Resources */,
-				30BFBFC20C4E7247C090BF3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,7 +300,6 @@
 				2A58CB121F6EC44900E817ED /* Frameworks */,
 				2A58CB131F6EC44900E817ED /* Resources */,
 				AB8552ADC391E49EA8E6A038 /* [CP] Embed Pods Frameworks */,
-				DFA3588032753977B337F211 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,36 +382,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		102CC2F29CD0394F46CDA670 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Framework/Pods-iOS Framework-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		30BFBFC20C4E7247C090BF3A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Framework/Pods-watchOS Framework-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		66205D56A55B350D43DED0D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,7 +406,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS Framework Unit Tests/Pods-iOS Framework Unit Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS Framework Unit Tests/Pods-iOS Framework Unit Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -450,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Framework Unit Tests/Pods-iOS Framework Unit Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS Framework Unit Tests/Pods-iOS Framework Unit Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D86F60458BEC4DF9B46C506B /* [CP] Check Pods Manifest.lock */ = {
@@ -469,21 +436,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFA3588032753977B337F211 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Framework Unit Tests/Pods-iOS Framework Unit Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F45713DBE9A20174440A4841 /* [CP] Check Pods Manifest.lock */ = {
@@ -612,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -666,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -694,6 +646,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = evomo.relaykit;
 				PRODUCT_NAME = RelayKit;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -718,6 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = evomo.relaykit;
 				PRODUCT_NAME = RelayKit;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -746,7 +700,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -772,7 +726,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
